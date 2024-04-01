@@ -37,7 +37,7 @@ export function AgentAccountComponent({ account }: AgentAccountAlises) {
                 />
               </div>
               <div className="flex flex-col items-start justify-start">
-                <div className="font-bold text-lg text-white">
+                <div className="font-bold text-lg text-slate-500 dark:text-white">
                   {agentDeatils?.name}
                 </div>
                 {/* if user is logedin he can view the agent number */}
