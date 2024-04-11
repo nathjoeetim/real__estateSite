@@ -82,7 +82,7 @@ function PropertyDetailsComponent() {
               </p>
             </div>
             <div
-              className="flex-1 rounded-md p-5 text-slate-600 w-full mb-8 shadow-xl"
+              className="flex-1 rounded-md p-5 text-slate-600 w-full mb-8 shadow-xl bg-[#F1FAFF]"
               style={{
                 backgroundImage:
                   "url('https://www.familycarbuyers.com/wp-content/uploads/2023/01/24572776_sl_031520_28970_10-1-scaled.jpg')",

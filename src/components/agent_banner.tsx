@@ -12,7 +12,7 @@ function AgentBanner() {
   return (
     <div className="flex flex-col w-full ">
       <div
-        className="flex flex-col-reverse lg:flex-row gap-2 justify-between items-center p-5 w-[96%] lg:w-[90%] h-fit lg:h-[500px] mx-auto mb-10 rounded-xl bg-gray-400 shadow-2xl"
+        className="flex flex-col-reverse lg:flex-row gap-2 justify-between items-center p-5 w-[96%] lg:w-[90%] h-fit lg:h-[500px] mx-auto mb-10 rounded-xl bg-[#F1FAFF] shadow-2xl"
         style={{
           backgroundImage:
             "url('https://www.familycarbuyers.com/wp-content/uploads/2023/01/24572776_sl_031520_28970_10-1-scaled.jpg')",

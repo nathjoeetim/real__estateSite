@@ -11,6 +11,7 @@ import {
 import { Button } from "./ui/button";
 import { propertyDataAlises } from "./data";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { CiPhone } from "react-icons/ci";
 
 type AgentAccountAlises = {
@@ -19,6 +20,12 @@ type AgentAccountAlises = {
 
 export function AgentAccountComponent({ account }: AgentAccountAlises) {
   const agentDeatils = account?.agent;
+  const router = useRouter();
+
+  function onNavigateToLoginScreenFn() {
+    router.push("/login");
+  }
+
   return (
     <Drawer>
       <DrawerTrigger>View Profile</DrawerTrigger>
@@ -52,7 +59,12 @@ export function AgentAccountComponent({ account }: AgentAccountAlises) {
                 call
               </div> */}
               {/* user will  be told to login if he or she is not and want to view the agent profile */}
-              <Button className="transition bg-violet-700 ">Login</Button>
+              <Button
+                className="transition bg-violet-700 "
+                onClick={onNavigateToLoginScreenFn}
+              >
+                Login
+              </Button>
             </div>
           </DrawerDescription>
         </DrawerHeader>

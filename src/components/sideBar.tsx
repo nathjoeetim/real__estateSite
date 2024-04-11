@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -13,8 +14,15 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Logo from "./logo";
+import { useRouter } from "next/navigation";
 
 export function SideBarContainer() {
+  const router = useRouter();
+
+  function onNavigateToLoginScreenFn() {
+    router.push("/login");
+  }
+
   return (
     <Sheet key={"left"}>
       <SheetTrigger asChild>
@@ -34,10 +42,17 @@ export function SideBarContainer() {
             When you think of real-estate think us !!
           </SheetDescription>
         </SheetHeader>
-        <div className="flex flex-col item-center gap-6 justify-center mt-10 ">
-          <Button variant="outline" className="transition cursor-pointer">
-            Login
-          </Button>
+
+        <div className="flex flex-col item-center gap-6 justify-center mt-10 w-full">
+          <SheetClose className="w-full">
+            <Button
+              variant="outline"
+              className="transition cursor-pointer w-full"
+              onClick={onNavigateToLoginScreenFn}
+            >
+              Login
+            </Button>
+          </SheetClose>
           <Button className="transition bg-violet-700 ">Sign-up</Button>
         </div>
         {/* here will be form for subsription to news letter  */}
