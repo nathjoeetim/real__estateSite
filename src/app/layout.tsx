@@ -6,11 +6,14 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/theme_toggler";
 import NavigationBarComponent from "@/components/topNavBar";
 import { Toaster } from "sonner";
+import { Roboto_Slab, Playfair_Display } from "next/font/google";
 import FotterComponent from "@/components/fotter";
 
-const fontSans = FontSans({
+const fontRobotoSlab = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-display",
+  style: "normal",
+  display: "block",
 });
 
 export const metadata: Metadata = {
@@ -27,8 +30,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-[#f8f7f4] dark:bg-[#0a0118] font-serif antialiased",
-          fontSans.variable
+          "min-h-screen bg-[#f8f7f4] dark:bg-[#0a0118] antialiased",
+          fontRobotoSlab.className
         )}
       >
         <Toaster expand={true} closeButton />
